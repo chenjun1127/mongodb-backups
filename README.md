@@ -43,11 +43,11 @@ s)
 默认情况下，MongoDB 会在当前目录下创建一个 dump 目录，并把所有的数据库按数据库名称创建目录。在这个实例中，有两数据库 admin 、test、express-demo、population-test 四个数据库。
 
 以下是可用于 mongodump 命令的可用选项的列表。
-| 语法 | 描述 | 示例 |
-|- | :-: | -: | 
-| ongodump —host HOST_NAME —port PORT_NUMBER | 此命令将备份指定的 mongod 实例的所有数据库。| mongodump --host 127.0.0.1 --port 27017 |
-| mongodump —out BACKUP_DIRECTORY | 此命令将仅在指定路径上备份数据库。 | mongodump --out /mongodb/mongobak |
-| mongodump —collection COLLECTION —db DB_NAME | 此命令将仅备份指定数据库的指定集合。 | mongodump --collection mycol --db test |
+| 语法 											| 描述 											| 示例 										|
+|---------------------------------------------- | :-------------------------------------------: | ----------------------------------------: | 
+| ongodump —host HOST_NAME —port PORT_NUMBER 	| 此命令将备份指定的 mongod 实例的所有数据库。	| mongodump --host 127.0.0.1 --port 27017 	|
+| mongodump —out BACKUP_DIRECTORY 				| 此命令将仅在指定路径上备份数据库。 			| mongodump --out /mongodb/mongobak 		|
+| mongodump —collection COLLECTION —db DB_NAME 	| 此命令将仅备份指定数据库的指定集合。 			| mongodump --collection mycol --db test 	|
 
 #### MongoDB数据的恢复
 
@@ -55,13 +55,3 @@ s)
 ```bash
 mongorestore
 ```
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-作者：larryzhao
-链接：http://www.jianshu.com/p/sTeAbC
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
