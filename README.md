@@ -55,3 +55,13 @@ s)
 ```bash
 mongorestore
 ```
+| 语法        	| 描述           | 示例  |
+| ------------- |:-------------:| -----:|
+| ongodump —host HOST_NAME —port PORT_NUMBER      	| 此命令将备份指定的 mongod 实例的所有数据库。 	| mongodump --host 127.0.0.1 --port 27017 	|
+| mongodump —out BACKUP_DIRECTORY     				| 此命令将仅在指定路径上备份数据库。      		| mongodump --out /mongodb/mongobak 		|
+| mongodump —collection COLLECTION —db DB_NAME      | 此命令将仅备份指定数据库的指定集合。			| mongodump --collection mycol --db test 	|
+
+作者：larryzhao
+链接：http://www.jianshu.com/p/sTeAbC
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
