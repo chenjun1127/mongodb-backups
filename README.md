@@ -1,7 +1,8 @@
 ### MongoDB一些要点
 
-#### 1、MongoDB数据的备份 
+#### 1、MongoDB数据的备份与恢复 
 
+* 备份
 要在MongoDB中创建数据库备份，应该使用 mongodump 命令。 此命令将导出转储服务器的整个数据到转储目录。
 
 启动 mongod 服务，并连接数据库，然后启动命令：
@@ -51,7 +52,7 @@ s)
 | mongodump —collection COLLECTION —db DB_NAME      | 此命令将仅备份指定数据库的指定集合。			| mongodump --collection mycol --db test 	|
 
 
-#### 2、MongoDB数据的恢复
+* 恢复
 
 要恢复备份数据，使用MongoDB的 mongorestore 命令。 此命令从备份目录中恢复所有数据。
 ```bash
