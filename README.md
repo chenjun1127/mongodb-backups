@@ -1,6 +1,6 @@
 ### MongoDB一些要点
 
-#### MongoDB数据的备份 
+#### 1、MongoDB数据的备份 
 
 要在MongoDB中创建数据库备份，应该使用 mongodump 命令。 此命令将导出转储服务器的整个数据到转储目录。
 
@@ -40,7 +40,7 @@ s)
 2017-11-23T18:11:18.719+0800    done dumping test.news (1 document)
 2017-11-23T18:11:18.720+0800    done dumping test.books (1 document)
 ```
-默认情况下，MongoDB 会在当前目录下创建一个 dump 目录，并把所有的数据库按数据库名称创建目录。在这个实例中，有两数据库 admin 、test、express-demo、population-test 四个数据库。
+默认情况下，MongoDB 会在当前目录下创建一个 dump 目录，并把所有的数据库按数据库名称创建目录。在这个实例中，有以下 admin 、test、express-demo、population-test 四个数据库。
 
 以下是可用于 mongodump 命令的可用选项的列表。
 
@@ -51,7 +51,7 @@ s)
 | mongodump —collection COLLECTION —db DB_NAME      | 此命令将仅备份指定数据库的指定集合。			| mongodump --collection mycol --db test 	|
 
 
-#### MongoDB数据的恢复
+#### 2、MongoDB数据的恢复
 
 要恢复备份数据，使用MongoDB的 mongorestore 命令。 此命令从备份目录中恢复所有数据。
 ```bash
