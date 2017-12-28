@@ -79,6 +79,15 @@ port=27017
 ```
 然后保存文件，在命令行启动：
 ```
-mongod --config d:mongo.conf
+mongod --config d:\mongo.conf
 ```
 即可启动成功（前提是上面配置指定的文件目录存在）。
+
+#### 3、将Mongo安装到系统服务启动
+上面的方法无法避免每次都要打开命令行输入相关命令，那么如何将mongo安装到电脑服务里启动呢？见下面：
+```
+mongod --config d:\mongo.conf --install --serviceName "MongoDB"
+```
+回车之后，就已经安装到系统服务了，可以打开控制面板--管理工具--服务，即可看到MongoDB服务。
+
+
