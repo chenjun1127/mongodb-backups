@@ -60,4 +60,25 @@ s)
 mongorestore
 ```
 
+#### 2、MongoDB的配置启动 
 
+众所周知，Mongodb的启动首先要指定数据库的存储目录，可以在命令行指定，也可以通过配置文件的方式来指定。通过配置文件的指定见下面，新建一个mongo.conf文件，输入以下
+```bash
+#数据库路径
+dbpath=d:\MongoDB\data\
+#日志输出文件路径
+logpath=d:\MongoDB\logs\mongo.log
+#错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不会重新创建一个新文件
+logappend=true
+#启用日志文件，默认启用
+journal=true
+#这个选项可以过滤一些无用的日志信息，若需要调试使用请设置为false
+quiet=false
+#端口号，默认为27017
+port=27017
+```
+然后保存文件，在命令行启动：
+```
+mongod --config d:mongo.conf
+```
+即可启动成功（前提是上面配置指定的文件目录存在）。
