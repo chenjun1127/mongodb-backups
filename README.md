@@ -1,6 +1,6 @@
 ### MongoDB一些要点
 
-#### 1、MongoDB数据的备份与恢复 
+#### 一、MongoDB数据的备份与恢复 
 
 * 备份
 
@@ -59,8 +59,51 @@ s)
 ```bash
 mongorestore
 ```
+#### 二、MongoDB数据的导入与导出
 
-#### 2、MongoDB的配置启动 
+数据导出：mongoexport
+
+* 概念：
+
+mongoDB中的mongoexport工具可以把一个collection导出成JSON格式或CSV格式的文件。可以通过参数指定导出的数据项，也可以根据指定的条件导出数据。
+
+* 语法：
+
+mongoexport -d dbname -c collectionname -o file --type json/csv -f field
+参数说明：
+-d ：数据库名
+-c ：collection名
+-o ：输出的文件名
+--type ： 输出的格式，默认为json
+-f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
+
+* 示例：
+```bash
+mongoexport -d shop-mall -c users -o /back-up/mongoDB/shop-mall/users.json 
+```
+
+数据导入：mongoimport
+
+*语法：
+```bash
+mongoimport -d dbname -c collectionname --file filename --headerline --type json/csv -f field
+```
+
+参数说明：
+ -d ：数据库名
+-c ：collection名
+--type ：导入的格式默认json
+-f ：导入的字段名
+--headerline ：如果导入的格式是csv，则可以使用第一行的标题作为导入的字段
+--file ：要导入的文件
+ 
+* 示例：
+```bash
+mongoimport -d shop-mall -c users --file back-up/data/shop-mall/users.json
+```
+
+
+#### 三、MongoDB的配置启动 
 
 众所周知，Mongodb的启动首先要指定数据库的存储目录，可以在命令行指定，也可以通过配置文件的方式来指定。通过配置文件的指定见下面，新建一个mongo.conf文件，输入以下
 ```bash
