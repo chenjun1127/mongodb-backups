@@ -61,7 +61,7 @@ mongorestore
 ```
 #### 二、MongoDB数据的导入与导出
 
-数据导出：mongoexport
+##### 数据导出：mongoexport
 
 * 概念：
 
@@ -70,19 +70,22 @@ mongoDB中的mongoexport工具可以把一个collection导出成JSON格式或CSV
 * 语法：
 
 mongoexport -d dbname -c collectionname -o file --type json/csv -f field
+
 参数说明：
+```
 -d ：数据库名
 -c ：collection名
 -o ：输出的文件名
 --type ： 输出的格式，默认为json
 -f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
+```
 
 * 示例：
 ```bash
 mongoexport -d shop-mall -c users -o /back-up/mongoDB/shop-mall/users.json 
 ```
 
-数据导入：mongoimport
+##### 数据导入：mongoimport
 
 *语法：
 ```bash
@@ -90,12 +93,14 @@ mongoimport -d dbname -c collectionname --file filename --headerline --type json
 ```
 
 参数说明：
- -d ：数据库名
+```bash
+-d ：数据库名
 -c ：collection名
 --type ：导入的格式默认json
 -f ：导入的字段名
 --headerline ：如果导入的格式是csv，则可以使用第一行的标题作为导入的字段
 --file ：要导入的文件
+```
  
 * 示例：
 ```bash
