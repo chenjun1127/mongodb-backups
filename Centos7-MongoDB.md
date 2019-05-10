@@ -1,4 +1,4 @@
-### Ceontos安装nodejs
+### Centos7 安装 Nodejs
 
 参考：[阿里云服务器安装 nodejs](https://help.aliyun.com/document_detail/50775.html?spm=5176.doc25429.6.644.3D2aMv)
 
