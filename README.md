@@ -138,4 +138,4 @@ mongod --config d:\mongo.conf --install --serviceName "MongoDB"
 ```
 回车之后，就已经安装到系统服务了，可以打开控制面板--管理工具--服务，即可看到MongoDB服务。
 
-Tips: [Centos7 安装 Mongodb](https://github.com/chenjun1127/mongodb-backups/blob/master/Centos7-MongoDB.md)
+Tips：[Centos7 安装 Mongodb](https://github.com/chenjun1127/mongodb-backups/blob/master/Centos7-MongoDB.md)
